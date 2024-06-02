@@ -25,6 +25,13 @@
 		70C24D632C06D7BB0051FD55 /* LocaleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D622C06D7BB0051FD55 /* LocaleExtensions.swift */; };
 		70C24D652C06D7E30051FD55 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D642C06D7E30051FD55 /* Error.swift */; };
 		70C24D672C06DD380051FD55 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D662C06DD380051FD55 /* MainViewModel.swift */; };
+		70C24D692C07162F0051FD55 /* ConversionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D682C07162F0051FD55 /* ConversionManager.swift */; };
+		70C24D6B2C072E970051FD55 /* ConvertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D6A2C072E970051FD55 /* ConvertViewModel.swift */; };
+		70C24D6D2C08623B0051FD55 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D6C2C08623B0051FD55 /* ThemeManager.swift */; };
+		70C24D732C086DEC0051FD55 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70C24D722C086DEC0051FD55 /* RobotoCondensed-Regular.ttf */; };
+		70C24D772C08716D0051FD55 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70C24D762C08716D0051FD55 /* RobotoCondensed-Italic.ttf */; };
+		70C24D792C0CA9B10051FD55 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D782C0CA9B10051FD55 /* Observable.swift */; };
+		70C24D7E2C0D7C450051FD55 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D7D2C0D7C450051FD55 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +74,14 @@
 		70C24D622C06D7BB0051FD55 /* LocaleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleExtensions.swift; sourceTree = "<group>"; };
 		70C24D642C06D7E30051FD55 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		70C24D662C06DD380051FD55 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		70C24D682C07162F0051FD55 /* ConversionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionManager.swift; sourceTree = "<group>"; };
+		70C24D6A2C072E970051FD55 /* ConvertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewModel.swift; sourceTree = "<group>"; };
+		70C24D6C2C08623B0051FD55 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		70C24D6F2C0867D90051FD55 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		70C24D722C086DEC0051FD55 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "CurrencyConverter-UIKit/Resources/Fonts/RobotoCondensed/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		70C24D762C08716D0051FD55 /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Italic.ttf"; path = "CurrencyConverter-UIKit/Resources/Fonts/RobotoCondensed/RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		70C24D782C0CA9B10051FD55 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		70C24D7D2C0D7C450051FD55 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +112,8 @@
 		70C24D162C05D63F0051FD55 = {
 			isa = PBXGroup;
 			children = (
+				70C24D762C08716D0051FD55 /* RobotoCondensed-Italic.ttf */,
+				70C24D722C086DEC0051FD55 /* RobotoCondensed-Regular.ttf */,
 				70C24D212C05D63F0051FD55 /* CurrencyConverter-UIKit */,
 				70C24D382C05D6410051FD55 /* CurrencyConverter-UIKitTests */,
 				70C24D422C05D6410051FD55 /* CurrencyConverter-UIKitUITests */,
@@ -117,18 +134,16 @@
 		70C24D212C05D63F0051FD55 /* CurrencyConverter-UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				70C24D7A2C0D6B620051FD55 /* Scene */,
+				70C24D6E2C0866D30051FD55 /* Resources */,
 				70C24D5C2C06D7100051FD55 /* Utilities */,
 				70C24D592C06D6D50051FD55 /* Manager */,
 				70C24D542C06D5FD0051FD55 /* Model */,
 				70C24D222C05D63F0051FD55 /* AppDelegate.swift */,
 				70C24D242C05D63F0051FD55 /* SceneDelegate.swift */,
-				70C24D262C05D63F0051FD55 /* MainViewController.swift */,
 				70C24D282C05D63F0051FD55 /* Main.storyboard */,
-				70C24D2B2C05D6410051FD55 /* Assets.xcassets */,
 				70C24D2D2C05D6410051FD55 /* LaunchScreen.storyboard */,
 				70C24D302C05D6410051FD55 /* Info.plist */,
-				70C24D522C06CCF70051FD55 /* ConvertViewController.swift */,
-				70C24D662C06DD380051FD55 /* MainViewModel.swift */,
 			);
 			path = "CurrencyConverter-UIKit";
 			sourceTree = "<group>";
@@ -163,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				70C24D5A2C06D6E40051FD55 /* NetworkManager.swift */,
+				70C24D682C07162F0051FD55 /* ConversionManager.swift */,
+				70C24D6C2C08623B0051FD55 /* ThemeManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -172,6 +189,8 @@
 			children = (
 				70C24D5D2C06D74D0051FD55 /* Extension */,
 				70C24D642C06D7E30051FD55 /* Error.swift */,
+				70C24D782C0CA9B10051FD55 /* Observable.swift */,
+				70C24D7D2C0D7C450051FD55 /* Coordinator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -184,6 +203,42 @@
 				70C24D622C06D7BB0051FD55 /* LocaleExtensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		70C24D6E2C0866D30051FD55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				70C24D6F2C0867D90051FD55 /* Fonts */,
+				70C24D2B2C05D6410051FD55 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		70C24D7A2C0D6B620051FD55 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				70C24D7C2C0D6B740051FD55 /* ConvertView */,
+				70C24D7B2C0D6B690051FD55 /* MainView */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		70C24D7B2C0D6B690051FD55 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				70C24D262C05D63F0051FD55 /* MainViewController.swift */,
+				70C24D662C06DD380051FD55 /* MainViewModel.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		70C24D7C2C0D6B740051FD55 /* ConvertView */ = {
+			isa = PBXGroup;
+			children = (
+				70C24D6A2C072E970051FD55 /* ConvertViewModel.swift */,
+				70C24D522C06CCF70051FD55 /* ConvertViewController.swift */,
+			);
+			path = ConvertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +345,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C24D772C08716D0051FD55 /* RobotoCondensed-Italic.ttf in Resources */,
+				70C24D732C086DEC0051FD55 /* RobotoCondensed-Regular.ttf in Resources */,
 				70C24D2F2C05D6410051FD55 /* LaunchScreen.storyboard in Resources */,
 				70C24D2C2C05D6410051FD55 /* Assets.xcassets in Resources */,
 				70C24D2A2C05D63F0051FD55 /* Main.storyboard in Resources */,
@@ -317,18 +374,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C24D792C0CA9B10051FD55 /* Observable.swift in Sources */,
 				70C24D582C06D6450051FD55 /* Currencies.swift in Sources */,
 				70C24D632C06D7BB0051FD55 /* LocaleExtensions.swift in Sources */,
+				70C24D6D2C08623B0051FD55 /* ThemeManager.swift in Sources */,
 				70C24D272C05D63F0051FD55 /* MainViewController.swift in Sources */,
 				70C24D652C06D7E30051FD55 /* Error.swift in Sources */,
 				70C24D562C06D6290051FD55 /* Currency.swift in Sources */,
 				70C24D5B2C06D6E40051FD55 /* NetworkManager.swift in Sources */,
 				70C24D232C05D63F0051FD55 /* AppDelegate.swift in Sources */,
 				70C24D612C06D7960051FD55 /* JSONDecoderExtension.swift in Sources */,
+				70C24D7E2C0D7C450051FD55 /* Coordinator.swift in Sources */,
 				70C24D532C06CCF70051FD55 /* ConvertViewController.swift in Sources */,
 				70C24D5F2C06D7670051FD55 /* DateFormatterExtension.swift in Sources */,
 				70C24D252C05D63F0051FD55 /* SceneDelegate.swift in Sources */,
 				70C24D672C06DD380051FD55 /* MainViewModel.swift in Sources */,
+				70C24D6B2C072E970051FD55 /* ConvertViewModel.swift in Sources */,
+				70C24D692C07162F0051FD55 /* ConversionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
