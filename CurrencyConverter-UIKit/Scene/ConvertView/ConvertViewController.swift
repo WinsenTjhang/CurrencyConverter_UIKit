@@ -24,6 +24,7 @@ class ConvertViewController: UIViewController {
     let currencyDetailsRectangle = UIView()
     let divider = UIView()
     let currencyDetail = UILabel()
+    let theme = ThemeManager.shared.selectedTheme
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,8 @@ class ConvertViewController: UIViewController {
         
         setupViews()
         bindViewModel()
+        
+        overrideUserInterfaceStyle = theme.scheme ?? .unspecified
     }
     
     private func setupViews() {
@@ -39,8 +42,6 @@ class ConvertViewController: UIViewController {
         
         setupViewWithShadow(resultView)
         setupViewWithShadow(swapButton)
-        
-        setupViewWithShadow(currencyDetailsRectangle)
     }
     
     private func bindViewModel() {
@@ -56,17 +57,17 @@ class ConvertViewController: UIViewController {
         view.layer.shadowRadius = 8
     }
     
+    func updateCurrencyCodes() {
+        currencyResultCode.text = viewModel?.currencyCodeForResultView
+        currencyInputCode.text = viewModel?.currencyCodeForInputView
+        swapButton.isEnabled = viewModel?.isInvertConversionAvailable() ?? false
+    }
+    
     @IBAction func swapButton(_ sender: UIButton) {
         viewModel?.toggleConversionType()
         updateCurrencyCodes()
         resultAmount.text = "0.00"
         inputAmount.text = ""
-    }
-    
-    func updateCurrencyCodes() {
-        currencyResultCode.text = viewModel?.currencyCodeForResultView
-        currencyInputCode.text = viewModel?.currencyCodeForInputView
-        swapButton.isEnabled = viewModel?.isInvertConversionAvailable() ?? false
     }
     
     @objc func inputDoneButtonTapped() {
@@ -77,41 +78,60 @@ class ConvertViewController: UIViewController {
 
 extension ConvertViewController {
     func setupInputView() {
-        inputViewRectangle.backgroundColor = .white
+        view.addSubview(inputViewRectangle)
+        
+        setupDivider()
+        setupCurrencyInputCode()
+        setupInputAmount()
+        setupInputViewRectangle()
+        
+        setupConstraints()
+        setupToolbarForInputAmount()
+    }
+    
+    private func setupInputViewRectangle() {
         inputViewRectangle.layer.cornerRadius = 10
+        inputViewRectangle.translatesAutoresizingMaskIntoConstraints = false
         setupViewWithShadow(inputViewRectangle)
         
-        inputViewRectangle.addSubview(currencyInputCode)
-        inputViewRectangle.addSubview(inputAmount)
-        inputViewRectangle.addSubview(divider)
-        view.addSubview(inputViewRectangle)
-        currencyDetailsRectangle.addSubview(currencyDetail)
-        view.addSubview(currencyDetailsRectangle)
-        
+        if theme == .dark {
+            inputViewRectangle.layer.borderColor = UIColor.systemBlue.cgColor
+            inputViewRectangle.layer.borderWidth = 1.0
+        } else {
+            inputViewRectangle.backgroundColor = .white
+        }
+    }
+    
+    private func setupDivider() {
         divider.backgroundColor = .lightGray
         divider.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            divider.leadingAnchor.constraint(equalTo: currencyInputCode.trailingAnchor, constant: 5),
-            divider.centerYAnchor.constraint(equalTo: inputViewRectangle.centerYAnchor),
-            divider.heightAnchor.constraint(equalTo: inputViewRectangle.heightAnchor, multiplier: 0.6),
-            divider.widthAnchor.constraint(equalToConstant: 1)
-        ])
-        
+        inputViewRectangle.addSubview(divider)
+    }
+    
+    private func setupCurrencyInputCode() {
         currencyInputCode.translatesAutoresizingMaskIntoConstraints = false
+        inputViewRectangle.addSubview(currencyInputCode)
+    }
+    
+    private func setupInputAmount() {
         inputAmount.translatesAutoresizingMaskIntoConstraints = false
-        inputViewRectangle.translatesAutoresizingMaskIntoConstraints = false
-        
+        inputViewRectangle.addSubview(inputAmount)
+    }
+    
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             inputViewRectangle.widthAnchor.constraint(equalToConstant: 300),
             inputViewRectangle.heightAnchor.constraint(equalToConstant: 50),
             inputViewRectangle.topAnchor.constraint(equalTo: swapButton.bottomAnchor, constant: 60),
             inputViewRectangle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             inputViewRectangle.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 10),
-            inputViewRectangle.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -10)
-        ])
-        
-        NSLayoutConstraint.activate([
+            inputViewRectangle.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -10),
+            
+            divider.leadingAnchor.constraint(equalTo: currencyInputCode.trailingAnchor, constant: 5),
+            divider.centerYAnchor.constraint(equalTo: inputViewRectangle.centerYAnchor),
+            divider.heightAnchor.constraint(equalTo: inputViewRectangle.heightAnchor, multiplier: 0.6),
+            divider.widthAnchor.constraint(equalToConstant: 1),
+            
             currencyInputCode.topAnchor.constraint(equalTo: inputViewRectangle.topAnchor, constant: 10),
             currencyInputCode.leadingAnchor.constraint(equalTo: inputViewRectangle.leadingAnchor, constant: 10),
             currencyInputCode.bottomAnchor.constraint(equalTo: inputViewRectangle.bottomAnchor, constant: -10),
@@ -120,10 +140,7 @@ extension ConvertViewController {
             inputAmount.leadingAnchor.constraint(equalTo: divider.trailingAnchor, constant: 15),
             inputAmount.trailingAnchor.constraint(equalTo: inputViewRectangle.trailingAnchor, constant: -10),
             inputAmount.bottomAnchor.constraint(equalTo: inputViewRectangle.bottomAnchor, constant: -10),
-            
         ])
-
-        setupToolbarForInputAmount()
         
     }
     
@@ -140,42 +157,59 @@ extension ConvertViewController {
 
 extension ConvertViewController {
     func setupCurrencyDetail() {
-        currencyDetail.numberOfLines = 0
-        currencyDetail.font = UIFont.systemFont(ofSize: 14)
-        currencyDetail.text =
-        "Currency Name: \(viewModel?.currency.currencyName ?? "N/A")\n" +
-        "Country: \(viewModel?.currency.country ?? "N/A")\n" +
-        "Buy Rate: \(viewModel?.currency.buyTT ?? "N/A")\n" +
-        "Sell Rate: \(viewModel?.currency.sellTT ?? "N/A")\n" +
-        "Buy TC: \(viewModel?.currency.buyTC ?? "N/A")\n" +
-        "Buy Notes: \(viewModel?.currency.buyNotes ?? "N/A")\n" +
-        "Sell Notes: \(viewModel?.currency.sellNotes ?? "N/A")\n" +
-        "Spot Rate Date: \(DateFormatter.displayDate.string(from: viewModel?.currency.spotRateDate ?? Date()))\n" +
-        "Effective Date: \(DateFormatter.displayDate.string(from: viewModel?.currency.effectiveDate ?? Date()))\n" +
-        "Update Date: \(DateFormatter.displayDate.string(from: viewModel?.currency.updateDate ?? Date()))\n" +
-        "Last Updated: \(DateFormatter.displayDate.string(from: viewModel?.currency.lastUpdated ?? Date()))"
+        setupCurrencyDetailsRectangle()
+        setupCurrencyDetailLabel()
+        setupConstraintsForCurrencyDetail()
+    }
+    
+    private func setupCurrencyDetailsRectangle() {
+        view.addSubview(currencyDetailsRectangle)
         
-        currencyDetailsRectangle.backgroundColor = .white
         currencyDetailsRectangle.layer.cornerRadius = 10
-        //        currencyDetailsRectangle.layer.shadowColor = UIColor.gray.cgColor
-        //        currencyDetailsRectangle.layer.shadowOpacity = 0.4
-        //        currencyDetailsRectangle.layer.shadowOffset = CGSize(width: 3, height: 3)
-        //        currencyDetailsRectangle.layer.shadowRadius = 10
-        
+        setupViewWithShadow(currencyDetailsRectangle)
         currencyDetailsRectangle.translatesAutoresizingMaskIntoConstraints = false
+        
+        if theme == .dark {
+            currencyDetailsRectangle.layer.borderColor = UIColor.systemBlue.cgColor
+            currencyDetailsRectangle.layer.borderWidth = 1.0
+        } else {
+            currencyDetailsRectangle.backgroundColor = .white
+        }
+    }
+    
+    private func setupCurrencyDetailLabel() {
+        currencyDetail.numberOfLines = 0
+        currencyDetail.font = .systemFont(ofSize: 14)
+        currencyDetail.text = generateCurrencyDetailText()
         currencyDetail.translatesAutoresizingMaskIntoConstraints = false
-        
-        
+        currencyDetailsRectangle.addSubview(currencyDetail)
+    }
+    
+    private func generateCurrencyDetailText() -> String {
+        """
+        Currency Name: \(viewModel?.currency.currencyName ?? "N/A")
+        Country: \(viewModel?.currency.country ?? "N/A")
+        Buy Rate: \(viewModel?.currency.buyTT ?? "N/A")
+        Sell Rate: \(viewModel?.currency.sellTT ?? "N/A")
+        Buy TC: \(viewModel?.currency.buyTC ?? "N/A")
+        Buy Notes: \(viewModel?.currency.buyNotes ?? "N/A")
+        Sell Notes: \(viewModel?.currency.sellNotes ?? "N/A")
+        Spot Rate Date: \(DateFormatter.displayDate.string(from: viewModel?.currency.spotRateDate ?? Date()))
+        Effective Date: \(DateFormatter.displayDate.string(from: viewModel?.currency.effectiveDate ?? Date()))
+        Update Date: \(DateFormatter.displayDate.string(from: viewModel?.currency.updateDate ?? Date()))
+        Last Updated: \(DateFormatter.displayDate.string(from: viewModel?.currency.lastUpdated ?? Date()))
+        """
+    }
+    
+    private func setupConstraintsForCurrencyDetail() {
         NSLayoutConstraint.activate([
             currencyDetailsRectangle.widthAnchor.constraint(equalToConstant: 300),
             currencyDetailsRectangle.topAnchor.constraint(equalTo: inputViewRectangle.bottomAnchor, constant: 35),
             currencyDetailsRectangle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             currencyDetailsRectangle.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -80),
             currencyDetailsRectangle.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 10),
-            currencyDetailsRectangle.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -10)
-        ])
-        
-        NSLayoutConstraint.activate([
+            currencyDetailsRectangle.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -10),
+            
             currencyDetail.topAnchor.constraint(equalTo: currencyDetailsRectangle.topAnchor, constant: 15),
             currencyDetail.leadingAnchor.constraint(equalTo: currencyDetailsRectangle.leadingAnchor, constant: 15),
             currencyDetail.bottomAnchor.constraint(equalTo: currencyDetailsRectangle.bottomAnchor, constant: -15),

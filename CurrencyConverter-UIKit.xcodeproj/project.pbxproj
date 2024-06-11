@@ -14,8 +14,6 @@
 		70C24D2C2C05D6410051FD55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70C24D2B2C05D6410051FD55 /* Assets.xcassets */; };
 		70C24D2F2C05D6410051FD55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C24D2D2C05D6410051FD55 /* LaunchScreen.storyboard */; };
 		70C24D3A2C05D6410051FD55 /* CurrencyConverter_UIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D392C05D6410051FD55 /* CurrencyConverter_UIKitTests.swift */; };
-		70C24D442C05D6410051FD55 /* CurrencyConverter_UIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D432C05D6410051FD55 /* CurrencyConverter_UIKitUITests.swift */; };
-		70C24D462C05D6410051FD55 /* CurrencyConverter_UIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D452C05D6410051FD55 /* CurrencyConverter_UIKitUITestsLaunchTests.swift */; };
 		70C24D532C06CCF70051FD55 /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D522C06CCF70051FD55 /* ConvertViewController.swift */; };
 		70C24D562C06D6290051FD55 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D552C06D6290051FD55 /* Currency.swift */; };
 		70C24D582C06D6450051FD55 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D572C06D6450051FD55 /* Currencies.swift */; };
@@ -32,6 +30,7 @@
 		70C24D772C08716D0051FD55 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70C24D762C08716D0051FD55 /* RobotoCondensed-Italic.ttf */; };
 		70C24D792C0CA9B10051FD55 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D782C0CA9B10051FD55 /* Observable.swift */; };
 		70C24D7E2C0D7C450051FD55 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D7D2C0D7C450051FD55 /* Coordinator.swift */; };
+		70C24D802C1839600051FD55 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D7F2C1839600051FD55 /* MockNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +62,6 @@
 		70C24D352C05D6410051FD55 /* CurrencyConverter-UIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CurrencyConverter-UIKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70C24D392C05D6410051FD55 /* CurrencyConverter_UIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter_UIKitTests.swift; sourceTree = "<group>"; };
 		70C24D3F2C05D6410051FD55 /* CurrencyConverter-UIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CurrencyConverter-UIKitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		70C24D432C05D6410051FD55 /* CurrencyConverter_UIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter_UIKitUITests.swift; sourceTree = "<group>"; };
-		70C24D452C05D6410051FD55 /* CurrencyConverter_UIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter_UIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		70C24D522C06CCF70051FD55 /* ConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
 		70C24D552C06D6290051FD55 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		70C24D572C06D6450051FD55 /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
@@ -82,6 +79,7 @@
 		70C24D762C08716D0051FD55 /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Italic.ttf"; path = "CurrencyConverter-UIKit/Resources/Fonts/RobotoCondensed/RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
 		70C24D782C0CA9B10051FD55 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		70C24D7D2C0D7C450051FD55 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		70C24D7F2C1839600051FD55 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +114,6 @@
 				70C24D722C086DEC0051FD55 /* RobotoCondensed-Regular.ttf */,
 				70C24D212C05D63F0051FD55 /* CurrencyConverter-UIKit */,
 				70C24D382C05D6410051FD55 /* CurrencyConverter-UIKitTests */,
-				70C24D422C05D6410051FD55 /* CurrencyConverter-UIKitUITests */,
 				70C24D202C05D63F0051FD55 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,17 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				70C24D392C05D6410051FD55 /* CurrencyConverter_UIKitTests.swift */,
+				70C24D7F2C1839600051FD55 /* MockNetworkManager.swift */,
 			);
 			path = "CurrencyConverter-UIKitTests";
-			sourceTree = "<group>";
-		};
-		70C24D422C05D6410051FD55 /* CurrencyConverter-UIKitUITests */ = {
-			isa = PBXGroup;
-			children = (
-				70C24D432C05D6410051FD55 /* CurrencyConverter_UIKitUITests.swift */,
-				70C24D452C05D6410051FD55 /* CurrencyConverter_UIKitUITestsLaunchTests.swift */,
-			);
-			path = "CurrencyConverter-UIKitUITests";
 			sourceTree = "<group>";
 		};
 		70C24D542C06D5FD0051FD55 /* Model */ = {
@@ -398,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C24D802C1839600051FD55 /* MockNetworkManager.swift in Sources */,
 				70C24D3A2C05D6410051FD55 /* CurrencyConverter_UIKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,8 +396,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70C24D442C05D6410051FD55 /* CurrencyConverter_UIKitUITests.swift in Sources */,
-				70C24D462C05D6410051FD55 /* CurrencyConverter_UIKitUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
