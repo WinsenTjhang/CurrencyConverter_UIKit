@@ -8,6 +8,7 @@
 import UIKit
 
 class ThemeManager {
+    static let shared = ThemeManager()
     var selectedTheme: Theme = .light
     
     enum Theme: String, CaseIterable, Identifiable {
@@ -23,40 +24,13 @@ class ThemeManager {
             }
         }
         
-        var symbol: UIImage? {
-            switch self {
-            case .light: return UIImage(systemName: "sun.max")
-            case .dark: return UIImage(systemName: "moon")
-            }
-        }
-        
-        var backgroundColor: UIColor {
-            switch self {
-            case .light: return UIColor(named: "backgroundLight") ?? .white
-            case .dark: return UIColor(named: "backgroundDark") ?? .black
-            }
-        }
-        
-        var fxConvertTextColor: UIColor {
-            switch self {
-            case .light: return .blue
-            case .dark: return .white
-            }
-        }
-        
         var font: UIFont {
             switch self {
             case .light: return .systemFont(ofSize: 17)
-            case .dark: return UIFont(name: "RobotoCondensed-Regular", size: 20)!
+            case .dark: return UIFont(name: "RobotoCondensed-Regular", size: 20) ?? .systemFont(ofSize: 20)
             }
         }
         
-        var imageName: String {
-            switch self {
-            case .light: return "sun"
-            case .dark: return "moon"
-            }
-        }
     }
     
     func toggleTheme() {

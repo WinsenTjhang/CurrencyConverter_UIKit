@@ -17,8 +17,11 @@ class MainViewController: UIViewController {
     var selectedRowIndex: Int?
     var coordinator: MainCoordinator?
     
-    var themeManager: ThemeManager?
-    var viewModel: MainViewModel?
+    var viewModel: MainViewModel? {
+        didSet {
+            viewModel?.fetchData()
+        }
+    }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -30,9 +33,10 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard let themeManager = themeManager, let viewModel = viewModel else {
+        guard viewModel != nil else {
             fatalError("ThemeManager and ViewModel must not be nil")
         }
+        
         setupUI()
         setupBindings()
     }
@@ -65,23 +69,36 @@ class MainViewController: UIViewController {
                 self?.showError(error)
             }
         }
-        viewModel?.fetchData()
     }
     
     @IBAction func switchTheme(_ sender: Any) {
-        themeManager?.toggleTheme()
+        ThemeManager.shared.toggleTheme()
         applyTheme()
     }
     
     func applyTheme() {
-        let theme = themeManager?.selectedTheme
+        let theme = ThemeManager.shared.selectedTheme
         
         if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = theme?.scheme ?? .unspecified
+            overrideUserInterfaceStyle = theme.scheme ?? .unspecified
         }
         
-        view.backgroundColor = theme?.backgroundColor
         currencyTable.reloadData()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        let lightTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        let darkTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
+        if traitCollection.userInterfaceStyle == .dark {
+            themeSwitcher.setTitleTextAttributes(darkTextAttributes, for: .normal)
+            themeSwitcher.selectedSegmentTintColor = .gray
+        } else {
+            themeSwitcher.setTitleTextAttributes(lightTextAttributes, for: .normal)
+            themeSwitcher.selectedSegmentTintColor = .white
+        }
     }
     
     private func showError(_ error: Error) {
@@ -108,9 +125,9 @@ extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = currencyTable.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
         guard let currency = viewModel?.availableCurrencies[indexPath.row] else {return cell}
-        
         cell.textLabel?.text = currency.currencyCode + " - " + currency.country + " " + currency.currencyName
-        cell.textLabel?.font = themeManager?.selectedTheme.font
+        cell.textLabel?.font = ThemeManager.shared.selectedTheme.font
+        
         return cell
     }
     

@@ -24,11 +24,11 @@
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0iF-98-Vlu">
-                                <rect key="frame" x="274" y="59" width="76" height="32"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0iF-98-Vlu">
+                                <rect key="frame" x="274" y="79" width="76" height="32"/>
                                 <segments>
                                     <segment title="" image="sun.min" catalog="system"/>
-                                    <segment title="" image="moon.fill" catalog="system"/>
+                                    <segment title="" image="moon" catalog="system"/>
                                 </segments>
                                 <connections>
                                     <action selector="switchTheme:" destination="BYZ-38-t0r" eventType="valueChanged" id="SrB-Gn-Iol"/>
@@ -204,7 +204,7 @@
     </scenes>
     <resources>
         <image name="arrow.left.arrow.right" catalog="system" width="120" height="128"/>
-        <image name="moon.fill" catalog="system" width="128" height="123"/>
+        <image name="moon" catalog="system" width="128" height="123"/>
         <image name="sun.min" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

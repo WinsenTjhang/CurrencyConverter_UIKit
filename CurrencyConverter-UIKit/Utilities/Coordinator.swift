@@ -23,7 +23,6 @@ class MainCoordinator : Coordinator {
     func start() {
         guard let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else { return }
         mainViewController.coordinator = self
-        mainViewController.themeManager = ThemeManager()
         mainViewController.viewModel = MainViewModel()
         navigationController.pushViewController(mainViewController, animated: false)
     }

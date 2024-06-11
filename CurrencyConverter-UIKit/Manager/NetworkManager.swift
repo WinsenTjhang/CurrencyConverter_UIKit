@@ -7,12 +7,15 @@
 
 import Foundation
 
-final class NetworkManager {
+class NetworkManager {
     private let endpoint = "https://www.westpac.com.au/bin/getJsonRates.wbc.fx.json"
     
-    func getData() async throws -> Currencies {
-        let url = URL(string: endpoint)
-        let (data, response) = try await URLSession.shared.data(from: url!)
+    func getData() async throws -> [Currency] {
+         guard let url = URL(string: endpoint) else {
+            throw NetworkError.invalidURL(URL(string: endpoint))
+        }
+
+        let (data, response) = try await URLSession.shared.data(from: url)
         let responseCode = (response as? HTTPURLResponse)?.statusCode
         
         guard responseCode == 200 else {
@@ -25,10 +28,9 @@ final class NetworkManager {
                                                        DateFormatter.lastUpdated,
                                                        DateFormatter.yearMonthDay ]
 
-            return try decoder.decode(Currencies.self, from: data)
+            return try decoder.decode(Currencies.self, from: data).list
         } catch {
-            print("\(error)\n")
-            throw NetworkError.invalidData
+            throw NetworkError.invalidData(originalError: error)
         }
         
     }
