@@ -40,5 +40,5 @@ struct Currency: Codable, Hashable {
 
 extension Currency {
     static let sampleCurrency: Currency =
-    Currency (currencyCode: "IDR", currencyName: "Rupiah", country: "Indo", buyTT: "0.000097", sellTT: "0.5435", buyTC: "N/A", buyNotes: "N/A", sellNotes: "N/A", spotRateDate: Date(), effectiveDate: Date(), updateDate: Date(), lastUpdated: Date())
+    Currency (currencyCode: "IDR", currencyName: "Rupiah", country: "Indo", buyTT: "0.9442", sellTT: "0.8735", buyTC: "N/A", buyNotes: "N/A", sellNotes: "N/A", spotRateDate: Date(), effectiveDate: Date(), updateDate: Date(), lastUpdated: Date())
 }
