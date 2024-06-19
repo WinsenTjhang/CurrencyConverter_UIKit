@@ -1,0 +1,778 @@
+{
+  "apiVersion": "1.0",
+  "status": 1,
+  "data": {
+    "Brands": {
+      "WBC": {
+        "Brand": "WBC",
+        "Portfolios": {
+          "FX": {
+            "PortfolioId": "FX",
+            "Products": {
+              "USD": {
+                "ProductId": "USD",
+                "Rates": {
+                  "USD": {
+                    "currencyCode": "USD",
+                    "currencyName": "Dollars",
+                    "country": "USA",
+                    "buyTT": "0.6865",
+                    "sellTT": "0.6355",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "EUR": {
+                "ProductId": "EUR",
+                "Rates": {
+                  "EUR": {
+                    "currencyCode": "EUR",
+                    "currencyName": "Euro",
+                    "country": "Europe",
+                    "buyTT": "0.6381",
+                    "sellTT": "0.5902",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "GBP": {
+                "ProductId": "GBP",
+                "Rates": {
+                  "GBP": {
+                    "currencyCode": "GBP",
+                    "currencyName": "Pounds",
+                    "country": "United Kingdom",
+                    "buyTT": "0.5394",
+                    "sellTT": "0.4991",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "NZD": {
+                "ProductId": "NZD",
+                "Rates": {
+                  "NZD": {
+                    "currencyCode": "NZD",
+                    "currencyName": "Dollars",
+                    "country": "New Zealand",
+                    "buyTT": "1.1208",
+                    "sellTT": "1.0368",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "CNY": {
+                "ProductId": "CNY",
+                "Rates": {
+                  "CNY": {
+                    "currencyCode": "CNY",
+                    "currencyName": "Renminbi Yuan",
+                    "country": "China",
+                    "buyTT": "4.9754",
+                    "sellTT": "On App",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "AED": {
+                "ProductId": "AED",
+                "Rates": {
+                  "AED": {
+                    "currencyCode": "AED",
+                    "currencyName": "Dirham",
+                    "country": "United Arab Emirates",
+                    "buyTT": "2.5215",
+                    "sellTT": "2.3343",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "ARS": {
+                "ProductId": "ARS",
+                "Rates": {
+                  "ARS": {
+                    "currencyCode": "ARS",
+                    "currencyName": "Peso",
+                    "country": "Argentina",
+                    "buyTT": "N/A",
+                    "sellTT": "On App",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20130719",
+                    "effectiveDate_Fmt": "20160901T080001,84+10:00",
+                    "updateDate_Fmt": "20160901T080001,84+10:00",
+                    "LASTUPDATED": "08:09 AM 01 Sep 2016"
+                  }
+                }
+              },
+              "BDT": {
+                "ProductId": "BDT",
+                "Rates": {
+                  "BDT": {
+                    "currencyCode": "BDT",
+                    "currencyName": "Taka",
+                    "country": "Bangladesh",
+                    "buyTT": "N/A",
+                    "sellTT": "On App",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20130719",
+                    "effectiveDate_Fmt": "20160901T080001,84+10:00",
+                    "updateDate_Fmt": "20160901T080001,84+10:00",
+                    "LASTUPDATED": "08:09 AM 01 Sep 2016"
+                  }
+                }
+              },
+              "BND": {
+                "ProductId": "BND",
+                "Rates": {
+                  "BND": {
+                    "currencyCode": "BND",
+                    "currencyName": "Dollars",
+                    "country": "Brunei Darussalem",
+                    "buyTT": "0.9286",
+                    "sellTT": "0.8594",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "BRL": {
+                "ProductId": "BRL",
+                "Rates": {
+                  "BRL": {
+                    "currencyCode": "BRL",
+                    "currencyName": "Real",
+                    "country": "Brazil",
+                    "buyTT": "N/A",
+                    "sellTT": "On App",
+                    "buyTC": "N/A",
+                    "buyNotes": "",
+                    "sellNotes": "",
+                    "SpotRate_Date_Fmt": "20130719",
+                    "effectiveDate_Fmt": "20160901T080001,84+10:00",
+                    "updateDate_Fmt": "20160901T080001,84+10:00",
+                    "LASTUPDATED": "08:09 AM 01 Sep 2016"
+                  }
+                }
+              },
+              "CAD": {
+                "ProductId": "CAD",
+                "Rates": {
+                  "CAD": {
+                    "currencyCode": "CAD",
+                    "currencyName": "Dollars",
+                    "country": "Canada",
+                    "buyTT": "0.9449",
+                    "sellTT": "0.8742",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "CHF": {
+                "ProductId": "CHF",
+                "Rates": {
+                  "CHF": {
+                    "currencyCode": "CHF",
+                    "currencyName": "Francs",
+                    "country": "Switzerland",
+                    "buyTT": "0.6157",
+                    "sellTT": "0.5695",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "CLP": {
+                "ProductId": "CLP",
+                "Rates": {
+                  "CLP": {
+                    "currencyCode": "CLP",
+                    "currencyName": "Peso",
+                    "country": "Chile",
+                    "buyTT": "N/A",
+                    "sellTT": "On App",
+                    "buyTC": "N/A",
+                    "buyNotes": "",
+                    "sellNotes": "",
+                    "SpotRate_Date_Fmt": "20130719",
+                    "effectiveDate_Fmt": "20160901T085002,11+10:00",
+                    "updateDate_Fmt": "20160901T085002,11+10:00",
+                    "LASTUPDATED": "08:09 AM 01 Sep 2016"
+                  }
+                }
+              },
+              "DKK": {
+                "ProductId": "DKK",
+                "Rates": {
+                  "DKK": {
+                    "currencyCode": "DKK",
+                    "currencyName": "Kroner",
+                    "country": "Denmark",
+                    "buyTT": "4.7584",
+                    "sellTT": "4.4040",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "FJD": {
+                "ProductId": "FJD",
+                "Rates": {
+                  "FJD": {
+                    "currencyCode": "FJD",
+                    "currencyName": "Dollars",
+                    "country": "Fiji",
+                    "buyTT": "1.5680",
+                    "sellTT": "1.4285",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "HKD": {
+                "ProductId": "HKD",
+                "Rates": {
+                  "HKD": {
+                    "currencyCode": "HKD",
+                    "currencyName": "Dollars",
+                    "country": "Hong Kong",
+                    "buyTT": "5.3637",
+                    "sellTT": "4.9659",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "IDR": {
+                "ProductId": "IDR",
+                "Rates": {
+                  "IDR": {
+                    "currencyCode": "IDR",
+                    "currencyName": "Rupiah",
+                    "country": "Indonesia",
+                    "buyTT": "N/A",
+                    "sellTT": "N/A",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "INR": {
+                "ProductId": "INR",
+                "Rates": {
+                  "INR": {
+                    "currencyCode": "INR",
+                    "currencyName": "Rupees",
+                    "country": "India",
+                    "buyTT": "N/A",
+                    "sellTT": "53.007",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "JPY": {
+                "ProductId": "JPY",
+                "Rates": {
+                  "JPY": {
+                    "currencyCode": "JPY",
+                    "currencyName": "Yen",
+                    "country": "Japan",
+                    "buyTT": "107.86",
+                    "sellTT": "99.81",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "KRW": {
+                "ProductId": "KRW",
+                "Rates": {
+                  "KRW": {
+                    "currencyCode": "KRW",
+                    "currencyName": "Won",
+                    "country": "Korea (South)",
+                    "buyTT": "N/A",
+                    "sellTT": "On App",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20160831",
+                    "effectiveDate_Fmt": "20160901T080001,84+10:00",
+                    "updateDate_Fmt": "20160901T080001,84+10:00",
+                    "LASTUPDATED": "08:09 AM 01 Sep 2016"
+                  }
+                }
+              },
+              "LKR": {
+                "ProductId": "LKR",
+                "Rates": {
+                  "LKR": {
+                    "currencyCode": "LKR",
+                    "currencyName": "Rupees",
+                    "country": "Sri Lanka",
+                    "buyTT": "N/A",
+                    "sellTT": "N/A",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20200723",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "MYR": {
+                "ProductId": "MYR",
+                "Rates": {
+                  "MYR": {
+                    "currencyCode": "MYR",
+                    "currencyName": "Ringgit",
+                    "country": "Malaysia",
+                    "buyTT": "N/A",
+                    "sellTT": "N/A",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "NOK": {
+                "ProductId": "NOK",
+                "Rates": {
+                  "NOK": {
+                    "currencyCode": "NOK",
+                    "currencyName": "Kroner",
+                    "country": "Norway",
+                    "buyTT": "7.3088",
+                    "sellTT": "6.7624",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "PGK": {
+                "ProductId": "PGK",
+                "Rates": {
+                  "PGK": {
+                    "currencyCode": "PGK",
+                    "currencyName": "Kina",
+                    "country": "Papua New Guinea",
+                    "buyTT": "N/A",
+                    "sellTT": "2.3893",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "PHP": {
+                "ProductId": "PHP",
+                "Rates": {
+                  "PHP": {
+                    "currencyCode": "PHP",
+                    "currencyName": "Peso",
+                    "country": "Philippines",
+                    "buyTT": "N/A",
+                    "sellTT": "37.292",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "PKR": {
+                "ProductId": "PKR",
+                "Rates": {
+                  "PKR": {
+                    "currencyCode": "PKR",
+                    "currencyName": "Rupees",
+                    "country": "Pakistan",
+                    "buyTT": "191.468",
+                    "sellTT": "176.960",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "SAR": {
+                "ProductId": "SAR",
+                "Rates": {
+                  "SAR": {
+                    "currencyCode": "SAR",
+                    "currencyName": "Riyals",
+                    "country": "Saudi Arabia",
+                    "buyTT": "N/A",
+                    "sellTT": "N/A",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20210730",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "SBD": {
+                "ProductId": "SBD",
+                "Rates": {
+                  "SBD": {
+                    "currencyCode": "SBD",
+                    "currencyName": "Dollars",
+                    "country": "Solomon Islands",
+                    "buyTT": "6.1291",
+                    "sellTT": "5.1256",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "SEK": {
+                "ProductId": "SEK",
+                "Rates": {
+                  "SEK": {
+                    "currencyCode": "SEK",
+                    "currencyName": "Kronor",
+                    "country": "Sweden",
+                    "buyTT": "7.2009",
+                    "sellTT": "6.6552",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "SGD": {
+                "ProductId": "SGD",
+                "Rates": {
+                  "SGD": {
+                    "currencyCode": "SGD",
+                    "currencyName": "Dollars",
+                    "country": "Singapore",
+                    "buyTT": "0.9287",
+                    "sellTT": "0.8595",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "THB": {
+                "ProductId": "THB",
+                "Rates": {
+                  "THB": {
+                    "currencyCode": "THB",
+                    "currencyName": "Baht",
+                    "country": "Thailand",
+                    "buyTT": "25.26",
+                    "sellTT": "23.29",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "TOP": {
+                "ProductId": "TOP",
+                "Rates": {
+                  "TOP": {
+                    "currencyCode": "TOP",
+                    "currencyName": "Pa anga",
+                    "country": "Tonga",
+                    "buyTT": "1.6590",
+                    "sellTT": "1.4752",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "TWD": {
+                "ProductId": "TWD",
+                "Rates": {
+                  "TWD": {
+                    "currencyCode": "TWD",
+                    "currencyName": "Dollars (New)",
+                    "country": "Taiwan",
+                    "buyTT": "N/A",
+                    "sellTT": "On App",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20160831",
+                    "effectiveDate_Fmt": "20160901T080001,84+10:00",
+                    "updateDate_Fmt": "20160901T080001,84+10:00",
+                    "LASTUPDATED": "08:09 AM 01 Sep 2016"
+                  }
+                }
+              },
+              "VND": {
+                "ProductId": "VND",
+                "Rates": {
+                  "VND": {
+                    "currencyCode": "VND",
+                    "currencyName": "Dong",
+                    "country": "Vietnam",
+                    "buyTT": "N/A",
+                    "sellTT": "On App",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20130719",
+                    "effectiveDate_Fmt": "20160901T080001,84+10:00",
+                    "updateDate_Fmt": "20160901T080001,84+10:00",
+                    "LASTUPDATED": "08:09 AM 01 Sep 2016"
+                  }
+                }
+              },
+              "VUV": {
+                "ProductId": "VUV",
+                "Rates": {
+                  "VUV": {
+                    "currencyCode": "VUV",
+                    "currencyName": "Vatu",
+                    "country": "Vanuatu",
+                    "buyTT": "85.80",
+                    "sellTT": "75.63",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "WST": {
+                "ProductId": "WST",
+                "Rates": {
+                  "WST": {
+                    "currencyCode": "WST",
+                    "currencyName": "Tala",
+                    "country": "Samoa",
+                    "buyTT": "1.8913",
+                    "sellTT": "1.6859",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "XPF": {
+                "ProductId": "XPF",
+                "Rates": {
+                  "XPF": {
+                    "currencyCode": "XPF",
+                    "currencyName": "Francs",
+                    "country": "French Pacific",
+                    "buyTT": "N/A",
+                    "sellTT": "N/A",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20210730",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "ZAR": {
+                "ProductId": "ZAR",
+                "Rates": {
+                  "ZAR": {
+                    "currencyCode": "ZAR",
+                    "currencyName": "Rand",
+                    "country": "South Africa",
+                    "buyTT": "12.8816",
+                    "sellTT": "11.8859",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "XAU": {
+                "ProductId": "XAU",
+                "Rates": {
+                  "XAU": {
+                    "currencyCode": "XAU",
+                    "currencyName": "GOLD",
+                    "country": "GOLD(1-15oz)",
+                    "buyTT": "On App",
+                    "sellTT": "N/A",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20240611",
+                    "effectiveDate_Fmt": "20240611T075105,03+10:00",
+                    "updateDate_Fmt": "20240611T075105,03+10:00",
+                    "LASTUPDATED": "07:06 AM 11 Jun 2024"
+                  }
+                }
+              },
+              "CNH": {
+                "ProductId": "CNH",
+                "Rates": {
+                  "CNH": {
+                    "currencyCode": "CNH",
+                    "currencyName": "YUAN RMB (HKD)",
+                    "country": "China",
+                    "buyTT": "5.3211",
+                    "sellTT": "On App",
+                    "buyTC": "N/A",
+                    "buyNotes": "N/A",
+                    "sellNotes": "N/A",
+                    "SpotRate_Date_Fmt": "20161011",
+                    "effectiveDate_Fmt": "20161011T151205,92+11:00",
+                    "updateDate_Fmt": "20161011T151205,92+11:00",
+                    "LASTUPDATED": "03:10 PM 11 Oct 2016"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
