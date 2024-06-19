@@ -20,11 +20,11 @@ class ConvertViewController: UIViewController {
     
     var viewModel: ConvertViewModel?
     var coordinator: MainCoordinator?
+    let theme = DefaultThemeManager.shared.selectedTheme
     let inputViewRectangle = UIView()
     let currencyDetailsRectangle = UIView()
     let divider = UIView()
     let currencyDetail = UILabel()
-    let theme = ThemeManager.shared.selectedTheme
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -180,25 +180,9 @@ extension ConvertViewController {
     private func setupCurrencyDetailLabel() {
         currencyDetail.numberOfLines = 0
         currencyDetail.font = .systemFont(ofSize: 14)
-        currencyDetail.text = generateCurrencyDetailText()
+        currencyDetail.text = viewModel?.generateCurrencyDetailText()
         currencyDetail.translatesAutoresizingMaskIntoConstraints = false
         currencyDetailsRectangle.addSubview(currencyDetail)
-    }
-    
-    private func generateCurrencyDetailText() -> String {
-        """
-        Currency Name: \(viewModel?.currency.currencyName ?? "N/A")
-        Country: \(viewModel?.currency.country ?? "N/A")
-        Buy Rate: \(viewModel?.currency.buyTT ?? "N/A")
-        Sell Rate: \(viewModel?.currency.sellTT ?? "N/A")
-        Buy TC: \(viewModel?.currency.buyTC ?? "N/A")
-        Buy Notes: \(viewModel?.currency.buyNotes ?? "N/A")
-        Sell Notes: \(viewModel?.currency.sellNotes ?? "N/A")
-        Spot Rate Date: \(DateFormatter.displayDate.string(from: viewModel?.currency.spotRateDate ?? Date()))
-        Effective Date: \(DateFormatter.displayDate.string(from: viewModel?.currency.effectiveDate ?? Date()))
-        Update Date: \(DateFormatter.displayDate.string(from: viewModel?.currency.updateDate ?? Date()))
-        Last Updated: \(DateFormatter.displayDate.string(from: viewModel?.currency.lastUpdated ?? Date()))
-        """
     }
     
     private func setupConstraintsForCurrencyDetail() {

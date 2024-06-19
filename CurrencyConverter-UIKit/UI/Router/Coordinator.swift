@@ -21,19 +21,27 @@ class MainCoordinator : Coordinator {
     }
     
     func start() {
+        let networkService = NetworkService()
+        let currencyRepository = CurrencyRepository(networkService: networkService)
+        let getCurrenciesUseCase = GetCurrenciesUseCase(currencyRepository: currencyRepository)
         guard let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else { return }
         mainViewController.coordinator = self
-        mainViewController.viewModel = MainViewModel()
+        mainViewController.viewModel = MainViewModel(getCurrenciesUseCase: getCurrenciesUseCase)
         navigationController.pushViewController(mainViewController, animated: false)
     }
-
+    
     func navigateToConvertViewController(with currency: Currency) {
+        let currencyConverter = AUDCurrencyConverter()
+        let currencyFormatter = AUDCurrencyFormatter()
+        let currencyConversionUseCase = CurrencyConversionUseCase(converter: currencyConverter)
+        let currencyFormatterUseCase = CurrencyFormatterUseCase(formatter: currencyFormatter)
+        
         guard let convertViewController = storyboard.instantiateViewController(withIdentifier: "ConvertViewController") as? ConvertViewController else { return }
         convertViewController.coordinator = self
-        convertViewController.viewModel = ConvertViewModel()
+        convertViewController.viewModel = ConvertViewModel(currencyConversionUseCase: currencyConversionUseCase, currencyFormatterUseCase: currencyFormatterUseCase)
         convertViewController.viewModel?.currency = currency
         convertViewController.navigationItem.title = "Convert"
-       
+        
         navigationController.pushViewController(convertViewController, animated: true)
     }
 }
