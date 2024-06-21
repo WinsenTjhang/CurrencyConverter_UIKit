@@ -8,22 +8,23 @@
 import Foundation
 
 class CurrencyRepository {
-    private let networkService: NetworkService
+    private let networkService: NetworkServiceProtocol
     
-    init(networkService: NetworkService) {
+    init(networkService: NetworkServiceProtocol) {
         self.networkService = networkService
     }
     
     func getCurrencies() async throws -> [Currency] {
-        let data = try await networkService.fetchData()
+        let data = try await networkService.fetchData(session: .shared)
         
         do {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategyFormatters = [ DateFormatter.iso8601,
                                                        DateFormatter.lastUpdated,
                                                        DateFormatter.yearMonthDay ]
-
-            return try decoder.decode(Currencies.self, from: data).list
+            
+            let result = try decoder.decode(Currencies.self, from: data).list
+            return result
         } catch {
             throw DecodeError.decodingFailed
         }

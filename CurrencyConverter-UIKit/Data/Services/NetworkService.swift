@@ -7,15 +7,19 @@
 
 import Foundation
 
-class NetworkService {
+protocol NetworkServiceProtocol {
+    func fetchData(session: URLSession) async throws -> Data
+}
+
+class NetworkService: NetworkServiceProtocol {
     private let endpoint = "https://www.westpac.com.au/bin/getJsonRates.wbc.fx.json"
-    
-    func fetchData() async throws -> Data {
+
+    func fetchData(session: URLSession) async throws -> Data {
         guard let url = URL(string: endpoint) else {
             throw NetworkError.invalidURL(URL(string: endpoint))
         }
 
-        let (data, response) = try await URLSession.shared.data(from: url)
+        let (data, response) = try await session.data(from: url)
         let responseCode = (response as? HTTPURLResponse)?.statusCode
         
         guard responseCode == 200 else {
@@ -26,7 +30,7 @@ class NetworkService {
     }
 }
 
-enum NetworkError: Error {
+enum NetworkError: Error, Equatable {
     case invalidResponse(statusCode: Int)
     case invalidURL(URL?)
 
