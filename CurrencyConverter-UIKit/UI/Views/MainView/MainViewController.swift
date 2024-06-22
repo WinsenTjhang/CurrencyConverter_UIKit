@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class MainViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class MainViewController: UIViewController {
     var selectedRowIndex: Int?
     var coordinator: MainCoordinator?
     let themeManager = DefaultThemeManager.shared
+    private var cancellables = Set<AnyCancellable>()
     
     var viewModel: MainViewModel? {
         didSet {
@@ -64,18 +66,21 @@ class MainViewController: UIViewController {
     }
     
     func setupBindings() {
-        viewModel?.dataLoadingStatus.bind { [weak self] status in
-            switch status {
-            case .loading:
-                self?.activityIndicator.startAnimating()
-            case .loaded:
-                self?.activityIndicator.stopAnimating()
-                self?.currencyTable.reloadData()
-            case .failed(let error):
-                self?.activityIndicator.stopAnimating()
-                self?.showError(error)
+        viewModel?.$dataLoadingStatus
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] status in
+                switch status {
+                case .loading:
+                    self?.activityIndicator.startAnimating()
+                case .loaded:
+                    self?.activityIndicator.stopAnimating()
+                    self?.currencyTable.reloadData()
+                case .failed(let error):
+                    self?.activityIndicator.stopAnimating()
+                    self?.showError(error)
+                }
             }
-        }
+            .store(in: &cancellables)
     }
     
     @IBAction func switchTheme(_ sender: Any) {
