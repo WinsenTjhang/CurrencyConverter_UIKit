@@ -32,6 +32,7 @@ class MainViewModel {
             
             do {
                 let data = try await getCurrenciesUseCase.execute()
+                
                 self.currencies = data.filter { $0.buyTT != "N/A" }.sorted { $0.currencyCode < $1.currencyCode }
                 self.dataLoadingStatus.value = .loaded(self.currencies)
             } catch {

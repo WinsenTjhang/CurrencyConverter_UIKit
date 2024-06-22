@@ -25,11 +25,8 @@
 		70C24D772C08716D0051FD55 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70C24D762C08716D0051FD55 /* RobotoCondensed-Italic.ttf */; };
 		70C24D792C0CA9B10051FD55 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D782C0CA9B10051FD55 /* Observable.swift */; };
 		70C24D7E2C0D7C450051FD55 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D7D2C0D7C450051FD55 /* Coordinator.swift */; };
-		70C24D802C1839600051FD55 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D7F2C1839600051FD55 /* MockNetworkManager.swift */; };
-		70C24D822C183CF80051FD55 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D812C183CF80051FD55 /* MainViewModelTests.swift */; };
 		70C24D842C183DCA0051FD55 /* FxJsonRates.json in Resources */ = {isa = PBXBuildFile; fileRef = 70C24D832C183DCA0051FD55 /* FxJsonRates.json */; };
 		70C24D862C183E770051FD55 /* StaticJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D852C183E770051FD55 /* StaticJSONDecoder.swift */; };
-		70C24D8A2C1964210051FD55 /* ConvertViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D892C1964210051FD55 /* ConvertViewModelTests.swift */; };
 		70C24D922C1C617E0051FD55 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D912C1C617E0051FD55 /* NetworkService.swift */; };
 		70C24D942C1C61B90051FD55 /* CurrencyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D932C1C61B90051FD55 /* CurrencyRepository.swift */; };
 		70C24D962C1C621E0051FD55 /* GetCurrenciesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D952C1C621E0051FD55 /* GetCurrenciesUseCase.swift */; };
@@ -39,6 +36,12 @@
 		70C24DA02C1D94CA0051FD55 /* CurrencyFormatterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D9F2C1D94CA0051FD55 /* CurrencyFormatterUseCase.swift */; };
 		70C24DA42C1DB0410051FD55 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24DA32C1DB0410051FD55 /* ThemeManager.swift */; };
 		70C24DA62C1DB0E60051FD55 /* Theme+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24DA52C1DB0E60051FD55 /* Theme+Presentation.swift */; };
+		70C24DB02C22CB1C0051FD55 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24DAF2C22CB1C0051FD55 /* MockNetworkService.swift */; };
+		70C24DB22C22CC870051FD55 /* CurrencyRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24DB12C22CC860051FD55 /* CurrencyRepositoryTests.swift */; };
+		70C24DB52C23FAC40051FD55 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24DB42C23FAC30051FD55 /* NetworkServiceTests.swift */; };
+		70C24DB72C23FB160051FD55 /* MockURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24DB62C23FB160051FD55 /* MockURLSessionProtocol.swift */; };
+		70C24DBA2C25624F0051FD55 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24DB92C25624F0051FD55 /* MainViewModelTests.swift */; };
+		70C24DBC2C25903F0051FD55 /* ConvertViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24DBB2C25903F0051FD55 /* ConvertViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,11 +77,8 @@
 		70C24D762C08716D0051FD55 /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Italic.ttf"; path = "CurrencyConverter-UIKit/Resources/Fonts/RobotoCondensed/RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
 		70C24D782C0CA9B10051FD55 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		70C24D7D2C0D7C450051FD55 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		70C24D7F2C1839600051FD55 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
-		70C24D812C183CF80051FD55 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		70C24D832C183DCA0051FD55 /* FxJsonRates.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FxJsonRates.json; sourceTree = "<group>"; };
 		70C24D852C183E770051FD55 /* StaticJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticJSONDecoder.swift; sourceTree = "<group>"; };
-		70C24D892C1964210051FD55 /* ConvertViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewModelTests.swift; sourceTree = "<group>"; };
 		70C24D912C1C617E0051FD55 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		70C24D932C1C61B90051FD55 /* CurrencyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRepository.swift; sourceTree = "<group>"; };
 		70C24D952C1C621E0051FD55 /* GetCurrenciesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrenciesUseCase.swift; sourceTree = "<group>"; };
@@ -88,6 +88,13 @@
 		70C24D9F2C1D94CA0051FD55 /* CurrencyFormatterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterUseCase.swift; sourceTree = "<group>"; };
 		70C24DA32C1DB0410051FD55 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		70C24DA52C1DB0E60051FD55 /* Theme+Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Presentation.swift"; sourceTree = "<group>"; };
+		70C24DAF2C22CB1C0051FD55 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		70C24DB12C22CC860051FD55 /* CurrencyRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRepositoryTests.swift; sourceTree = "<group>"; };
+		70C24DB32C22D0950051FD55 /* CurrencyConverter-UIKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CurrencyConverter-UIKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		70C24DB42C23FAC30051FD55 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		70C24DB62C23FB160051FD55 /* MockURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionProtocol.swift; sourceTree = "<group>"; };
+		70C24DB92C25624F0051FD55 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		70C24DBB2C25903F0051FD55 /* ConvertViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,9 +151,10 @@
 		70C24D382C05D6410051FD55 /* CurrencyConverter-UIKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				70C24D7F2C1839600051FD55 /* MockNetworkManager.swift */,
-				70C24D812C183CF80051FD55 /* MainViewModelTests.swift */,
-				70C24D892C1964210051FD55 /* ConvertViewModelTests.swift */,
+				70C24DBD2C2595060051FD55 /* ViewModels */,
+				70C24DB82C2561210051FD55 /* Networking */,
+				70C24DB12C22CC860051FD55 /* CurrencyRepositoryTests.swift */,
+				70C24DB32C22D0950051FD55 /* CurrencyConverter-UIKitTests-Bridging-Header.h */,
 			);
 			path = "CurrencyConverter-UIKitTests";
 			sourceTree = "<group>";
@@ -287,8 +295,8 @@
 		70C24DAA2C22A7700051FD55 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				70C24D852C183E770051FD55 /* StaticJSONDecoder.swift */,
 				70C24D5D2C06D74D0051FD55 /* Extension */,
+				70C24D852C183E770051FD55 /* StaticJSONDecoder.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -300,6 +308,25 @@
 				70C24D242C05D63F0051FD55 /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		70C24DB82C2561210051FD55 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				70C24DB42C23FAC30051FD55 /* NetworkServiceTests.swift */,
+				70C24DB62C23FB160051FD55 /* MockURLSessionProtocol.swift */,
+				70C24DAF2C22CB1C0051FD55 /* MockNetworkService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		70C24DBD2C2595060051FD55 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				70C24DBB2C25903F0051FD55 /* ConvertViewModelTests.swift */,
+				70C24DB92C25624F0051FD55 /* MainViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +382,7 @@
 					};
 					70C24D342C05D6410051FD55 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 						TestTargetID = 70C24D1E2C05D63F0051FD55;
 					};
 				};
@@ -436,9 +464,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70C24D802C1839600051FD55 /* MockNetworkManager.swift in Sources */,
-				70C24D822C183CF80051FD55 /* MainViewModelTests.swift in Sources */,
-				70C24D8A2C1964210051FD55 /* ConvertViewModelTests.swift in Sources */,
+				70C24DBC2C25903F0051FD55 /* ConvertViewModelTests.swift in Sources */,
+				70C24DB72C23FB160051FD55 /* MockURLSessionProtocol.swift in Sources */,
+				70C24DB22C22CC870051FD55 /* CurrencyRepositoryTests.swift in Sources */,
+				70C24DB52C23FAC40051FD55 /* NetworkServiceTests.swift in Sources */,
+				70C24DB02C22CB1C0051FD55 /* MockNetworkService.swift in Sources */,
+				70C24DBA2C25624F0051FD55 /* MainViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +681,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -659,6 +691,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "win.CurrencyConverter-UIKitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "CurrencyConverter-UIKitTests/CurrencyConverter-UIKitTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CurrencyConverter-UIKit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CurrencyConverter-UIKit";
@@ -670,6 +704,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -679,6 +714,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "win.CurrencyConverter-UIKitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "CurrencyConverter-UIKitTests/CurrencyConverter-UIKitTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CurrencyConverter-UIKit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CurrencyConverter-UIKit";
