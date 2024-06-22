@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 enum DataLoadingStatus {
     case loading
@@ -16,26 +17,28 @@ enum DataLoadingStatus {
 class MainViewModel {
     let getCurrenciesUseCase: GetCurrenciesUseCase
     var currencies: [Currency] = []
-    var dataLoadingStatus: Observable<DataLoadingStatus> = Observable(.loading)
+    @Published var dataLoadingStatus: DataLoadingStatus = .loading
     
     var completionHandler: (() -> Void)?
-
+    
     init(getCurrenciesUseCase: GetCurrenciesUseCase) {
         self.getCurrenciesUseCase = getCurrenciesUseCase
     }
     
-   @MainActor
+    @MainActor
     func fetchData() {
-        dataLoadingStatus.value = .loading
+        dataLoadingStatus = .loading
         Task {
             defer { completionHandler?() }
             
             do {
                 let data = try await getCurrenciesUseCase.execute()
-                self.currencies = data.filter { $0.buyTT != "N/A" }.sorted { $0.currencyCode < $1.currencyCode }
-                self.dataLoadingStatus.value = .loaded(self.currencies)
+                let filteredData = data.filter { $0.buyTT != "N/A" }.sorted { $0.currencyCode < $1.currencyCode }
+                    self.currencies = filteredData
+                    self.dataLoadingStatus = .loaded(filteredData)
+                
             } catch {
-                self.dataLoadingStatus.value = .failed(error)
+                self.dataLoadingStatus = .failed(error)
             }
         }
     }

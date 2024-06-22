@@ -23,7 +23,6 @@
 		70C24D6B2C072E970051FD55 /* ConvertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D6A2C072E970051FD55 /* ConvertViewModel.swift */; };
 		70C24D732C086DEC0051FD55 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70C24D722C086DEC0051FD55 /* RobotoCondensed-Regular.ttf */; };
 		70C24D772C08716D0051FD55 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70C24D762C08716D0051FD55 /* RobotoCondensed-Italic.ttf */; };
-		70C24D792C0CA9B10051FD55 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D782C0CA9B10051FD55 /* Observable.swift */; };
 		70C24D7E2C0D7C450051FD55 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D7D2C0D7C450051FD55 /* Coordinator.swift */; };
 		70C24D802C1839600051FD55 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D7F2C1839600051FD55 /* MockNetworkManager.swift */; };
 		70C24D822C183CF80051FD55 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C24D812C183CF80051FD55 /* MainViewModelTests.swift */; };
@@ -72,7 +71,6 @@
 		70C24D6F2C0867D90051FD55 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		70C24D722C086DEC0051FD55 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "CurrencyConverter-UIKit/Resources/Fonts/RobotoCondensed/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		70C24D762C08716D0051FD55 /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Italic.ttf"; path = "CurrencyConverter-UIKit/Resources/Fonts/RobotoCondensed/RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
-		70C24D782C0CA9B10051FD55 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		70C24D7D2C0D7C450051FD55 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		70C24D7F2C1839600051FD55 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 		70C24D812C183CF80051FD55 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
@@ -271,7 +269,6 @@
 			isa = PBXGroup;
 			children = (
 				70C24DA92C22A73F0051FD55 /* Extensions */,
-				70C24D782C0CA9B10051FD55 /* Observable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -406,7 +403,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70C24D792C0CA9B10051FD55 /* Observable.swift in Sources */,
 				70C24DA02C1D94CA0051FD55 /* CurrencyFormatterUseCase.swift in Sources */,
 				70C24D9C2C1D92D10051FD55 /* AUDCurrencyFormatter.swift in Sources */,
 				70C24D582C06D6450051FD55 /* Currencies.swift in Sources */,
